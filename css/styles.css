@@ -1,0 +1,10 @@
+li {
+  margin-top: 5px;
+  font-size: 16px;
+  list-style: none;
+}
+li .pizza {
+  font-style: italic;
+  font-size: 20px;
+  text-decoration: underline;
+}

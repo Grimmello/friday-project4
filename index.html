@@ -15,8 +15,8 @@
           <form id="pizza-builder">
             <div class="form-group">
               <p>Select your pizza size:</p>
-              <select id="sizePizza">
-                <option value=""></option>
+              <select id="sizePizza" required>
+                <option value= null></option>
                 <option value="8">Small</option>
                 <option value="10">Medium</option>
                 <option value="12">Large</option>
@@ -26,7 +26,7 @@
             <div class="form-group">
               <p>Select your sauce:</p>
               <select id="sauce">
-                <option value=""></option>
+                <option value= "None">None</option>
                 <option value="Marinara">Classic Marinara Sauce</option>
                 <option value="Alfredo">Alfredo Sauce</option>
                 <option value="Meat">Meat Sauce</option>
@@ -46,6 +46,11 @@
             <button id="add" type="button" name="add">Add</button><br>
             <button type="submit" class="submit">Checkout</button>
           </form>
+          <div class = "panel">
+            <ul id="pizzaList">
+            </ul>
+          </div>
+          <h3 id="price"></h3>
         </div>
       </div>
     </div>
