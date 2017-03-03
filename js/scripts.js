@@ -30,10 +30,6 @@ function checkboxArray() {
 
 // Front end
 $(function () {
-  $("#add").one('click', function() {
-      checkboxArray();
-      console.log(toppingArray);
-  });
   $("form#pizza-builder").submit(function(event) {
     event.preventDefault();
 
@@ -41,11 +37,15 @@ $(function () {
     var sauce = $("#sauce :selected").val();
 
     var check = sauceChecker(sauce);
+    checkboxArray();
 
     var newPizza = new Pizza(sizePizza, sauce, toppingArray);
 
-    pizzaPrice = pizzaPrice + newPizza.sizePizza + check + (toppingArray.length * 0.50);
-    $("#price").text("$"+pizzaPrice);
+    pizzaPrice = (pizzaPrice + newPizza.sizePizza + check + (toppingArray.length * 0.5));
+
+    var price = Number(pizzaPrice).toFixed(2);
+
+    $("#price").text("Total Price: $"+price);
 
     // Adds pizza to list
     $("ul#pizzaList").append("<li><span class='pizza'> Pizza #"+pizzaCounter+"</span> <br>Size: " + newPizza.sizePizza + " in. <br> Sauce: "+newPizza.sauce+" <br> Toppings: "+ toppingArray.join() +"</li>");
