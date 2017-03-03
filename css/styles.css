@@ -1,5 +1,5 @@
 li {
-  margin-top: 5px;
+  margin-top: 20px;
   font-size: 16px;
   list-style: none;
 }
@@ -10,17 +10,56 @@ li .pizza {
 }
 
 body {
-  background-color: black;
+  background-image: url("pizza.jpg");
+  background-repeat: no-repeat;
 }
 button {
   margin-top: 10px;
 }
+.panel {
+  background-color: #444444;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
 .panel-body {
-  border: 2px lightblue solid;
+  border: 1px red solid;
   margin-left: 5px;
   margin-right: 5px;
+  padding-left: 20px;
+}
+.panel-heading {
+  background-color: #9b0000;
+  border: 1px silver solid;
+  text-align: center;
 }
 #output {
-  background-color: lightblue;
+  background-color: #888888;
   display: none;
+  margin-top: 7%;
+  border-radius: 5px;
+  border: 1px silver solid;
+  padding-left: 0px;
+}
+.container {
+  border: 1px black solid;
+  margin-top: 3%;
+  border-radius: 5px;
+  max-width: 50%;
+  float: left;
+  margin-left: 3%; 
+}
+#price {
+  background-color: #666666;
+  border-radius: 5px;
+  padding: 5px 5px 5px 5px;
+  border: 1px gray solid;
+  display: none;
+  max-width: 70%
+}
+button {
+  background-color: #777777;
+  text-shadow: 1px 1px 2px black;
+}
+select {
+  background-color: #666666;
 }

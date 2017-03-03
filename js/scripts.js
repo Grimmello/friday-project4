@@ -54,10 +54,14 @@ $(function () {
     $("#price").text("Total Price: $"+price);
 
     // Adds pizza to list
-    $("ul#pizzaList").append("<li><span class='pizza'> Pizza #"+pizzaCounter+"</span> <br>Size: " + newPizza.sizePizza + " in. <br> Sauce: "+newPizza.sauce+" <br> Toppings: "+ toppingArray.join() +"</li>");
+    $("ul#pizzaList").append("<li><span class='pizza'> Pizza #"+pizzaCounter+"</span> <br>Size:&nbsp " + newPizza.sizePizza + " in. <br> Sauce: &nbsp"+newPizza.sauce+" <br> Toppings: &nbsp"+ toppingArray.join() +"</li>");
     $("#output").show();
+    $("#price").show();
     pizzaCounter = pizzaCounter+1
-
+    if (pizzaCounter > 5) {
+      alert("Only 5 pizzas allowed. Please call for more details: 503-PDX-PZZA");
+      document.getElementById('submit').disabled = true;
+    }
     // Will reset fields for new pizza
     $("#pizza-builder").each(function() {
       this.reset();
