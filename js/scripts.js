@@ -1,6 +1,7 @@
 //Back end
 var toppingArray = [],
-    inputs = document.getElementsByTagName("input");
+    inputs = document.getElementsByTagName("input"),
+    pizzaPrice = 0;
 
 function Pizza(sizePizza,sauce,toppings) {
   this.sizePizza = sizePizza
@@ -33,7 +34,7 @@ $(function () {
     var sauce = $("#sauce :selected").val();
     var check = sauceChecker(sauce);
     var newPizza = new Pizza(sizePizza, sauce, toppingArray);
-    var pizzaPrice = sizePizza + check + (toppingArray * 0.5);
+    pizzaPrice = pizzaPrice + newPizza.sizePizza + check + (toppingArray.length * 0.5);
     console.log(pizzaPrice);
   });
 });
