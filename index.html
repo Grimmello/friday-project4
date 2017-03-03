@@ -15,12 +15,12 @@
           <form id="pizza-builder">
             <div class="form-group">
               <p>Select your pizza size:</p>
-              <select id="size">
+              <select id="sizePizza">
                 <option value=""></option>
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-                <option value="X-Large">X-Large</option>
+                <option value="8">Small</option>
+                <option value="10">Medium</option>
+                <option value="12">Large</option>
+                <option value="14">X-Large</option>
               </select>
             </div>
             <div class="form-group">
@@ -33,22 +33,17 @@
                 <option value="BBQ">BBQ Sauce</option>
               </select>
             </div>
-            <form id="topping-form">
-              <div class="form-group">
-                <p>Select your pizza toppings</p>
-                <select id="toppings">
-                  <option value=""></option>
-                  <option value="Pepperoni">Pepperoni</option>
-                  <option value="Olives">Olives</option>
-                  <option value="Canadian Bacon">Canadian Bacon</option>
-                  <option value="Pineapple">Pineapple</option>
-                  <option value="Beef">Beef</option>
-                  <option value="Onion">Onion</option>
-                  <option value="Chicken">Chicken</option>
-                </select>
-              </div>
-              <button type="submit" name="submit">Add</button>
-            </form>
+            <div id="toppings">
+              <p>Select your pizza toppings</p>
+              <input type="checkbox" value="Pepperoni">Pepperoni</input><br>
+              <input type="checkbox" value="Olives">Olives</input><br>
+              <input type="checkbox" value="Canadian Bacon">Canadian Bacon</input><br>
+              <input type="checkbox" value="Pineapple">Pineapple</input><br>
+              <input type="checkbox" value="Beef">Beef</input><br>
+              <input type="checkbox" value="Onion">Onion</input><br>
+              <input type="checkbox" value="Chicken">Chicken</input><br>
+            </div>
+            <button id="add" type="button" name="add">Add</button><br>
             <button type="submit" class="submit">Checkout</button>
           </form>
         </div>
